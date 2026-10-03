@@ -46,7 +46,16 @@ See OFFER.md, CUSTOMER_PROFILE.md, SALES_PLAYBOOK.md, and MARKETING_PLAN.md.
 9. Internal operations automation
 10. Scale
 
-**Current phase: Phase 2 — Offer & Launch Preparation**
+**Current phase: Phase 3 — Brand, Website & Lead Capture**
+
+## Phase 3 deliverables
+
+- Professional conversion-focused landing page
+- Service and process sections
+- FAQ and objection-handling content
+- Structured qualification form
+- Lead capture architecture and launch checklist
+- Service-page copy
 
 ## Launch blockers
 
