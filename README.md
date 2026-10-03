@@ -46,7 +46,7 @@ See OFFER.md, CUSTOMER_PROFILE.md, SALES_PLAYBOOK.md, and MARKETING_PLAN.md.
 9. Internal operations automation
 10. Scale
 
-**Current phase: Phase 3 — Brand, Website & Lead Capture**
+**Current phase: Phase 4 — Lead System & Sales Pipeline**
 
 ## Phase 3 deliverables
 
@@ -56,6 +56,15 @@ See OFFER.md, CUSTOMER_PROFILE.md, SALES_PLAYBOOK.md, and MARKETING_PLAN.md.
 - Structured qualification form
 - Lead capture architecture and launch checklist
 - Service-page copy
+
+## Phase 4 deliverables
+
+- CRM/prospect database schema
+- Sales pipeline operating procedure
+- Personalized outreach templates
+- Outreach tracking starter CSV
+- Qualification and proposal gates
+- Owner-approval boundaries for real outreach
 
 ## Launch blockers
 
