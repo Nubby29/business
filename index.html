@@ -3,45 +3,106 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>AI Business Systems</title>
-  <meta name="description" content="Practical business automation systems that eliminate repetitive manual work.">
+  <title>AI Business Systems | Practical Business Automation</title>
+  <meta name="description" content="Practical automation systems for leads, reporting, monitoring, forms, and repetitive business operations.">
   <style>
-    :root{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#172033;background:#f6f8fb}
-    *{box-sizing:border-box} body{margin:0} .wrap{max-width:1080px;margin:auto;padding:0 24px}
-    header{padding:24px 0;border-bottom:1px solid #e4e8ef;background:#fff}.nav{display:flex;justify-content:space-between;align-items:center}
-    .brand{font-weight:800;letter-spacing:-.02em}.hero{padding:90px 0 70px;background:#fff}
-    .eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:12px;font-weight:800;opacity:.65}
-    h1{font-size:clamp(42px,7vw,76px);line-height:.98;max-width:850px;margin:18px 0}
-    .hero p{font-size:20px;line-height:1.6;max-width:720px;color:#566176}
-    .cta{display:inline-block;margin-top:20px;padding:14px 22px;border-radius:10px;background:#172033;color:#fff;text-decoration:none;font-weight:700}
-    section{padding:70px 0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-    .card{background:#fff;border:1px solid #e4e8ef;border-radius:16px;padding:26px}.card h3{margin-top:0}
-    .price{font-size:28px;font-weight:800;margin:14px 0}.muted{color:#667085;line-height:1.6}
-    footer{padding:35px 0;border-top:1px solid #e4e8ef;color:#667085}
-    @media(max-width:760px){.grid{grid-template-columns:1fr}.hero{padding-top:60px}}
+    :root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#172033;background:#f5f7fb;line-height:1.5}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0}
+    .wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid #e5e9f0}
+    .nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-weight:850;letter-spacing:-.03em}.nav a{color:#566176;text-decoration:none;font-size:14px;margin-left:20px}
+    .hero{background:#fff;padding:92px 0 80px;border-bottom:1px solid #e5e9f0}
+    .eyebrow{text-transform:uppercase;letter-spacing:.13em;font-size:12px;font-weight:800;color:#667085}
+    h1{font-size:clamp(46px,7vw,82px);line-height:.98;letter-spacing:-.055em;max-width:900px;margin:18px 0}
+    .lead{font-size:20px;line-height:1.65;color:#566176;max-width:760px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.btn{display:inline-block;padding:14px 20px;border-radius:10px;text-decoration:none;font-weight:750}.primary{background:#172033;color:#fff}.secondary{border:1px solid #d9dee7;color:#172033;background:#fff}
+    section{padding:78px 0}.section-head{max-width:720px;margin-bottom:30px}h2{font-size:clamp(32px,5vw,48px);line-height:1.05;letter-spacing:-.04em;margin:10px 0 14px}h3{margin:0 0 10px;font-size:20px}.muted{color:#667085}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.grid.two{grid-template-columns:repeat(2,1fr)}
+    .card{background:#fff;border:1px solid #e1e6ee;border-radius:18px;padding:26px;box-shadow:0 8px 30px rgba(23,32,51,.04)}.card ul{padding-left:20px;color:#667085}.card li{margin:7px 0}
+    .price{font-size:28px;font-weight:850;margin:16px 0 4px}.small{font-size:13px;color:#7a8496}
+    .band{background:#172033;color:#fff}.band .muted{color:#cbd2df}
+    .steps{counter-reset:step}.step{position:relative;padding-left:58px}.step:before{counter-increment:step;content:counter(step);position:absolute;left:0;top:0;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#eef1f6;color:#172033;font-weight:800}
+    .faq details{background:#fff;border:1px solid #e1e6ee;border-radius:12px;padding:18px 20px;margin:10px 0}.faq summary{font-weight:750;cursor:pointer}.faq p{color:#667085;margin-bottom:0}
+    .form{background:#fff;border:1px solid #e1e6ee;border-radius:18px;padding:28px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}label{font-size:13px;font-weight:750;display:block;margin-bottom:6px}input,select,textarea{width:100%;border:1px solid #d7dde7;border-radius:9px;padding:12px 13px;font:inherit;background:#fff}textarea{min-height:130px;resize:vertical}.full{grid-column:1/-1}
+    footer{padding:35px 0;border-top:1px solid #e1e6ee;color:#667085;font-size:14px}
+    @media(max-width:760px){.nav a{display:none}.grid,.grid.two,.form-grid{grid-template-columns:1fr}.full{grid-column:auto}.hero{padding-top:64px}section{padding:58px 0}}
   </style>
 </head>
 <body>
-<header><div class="wrap nav"><div class="brand">AI Business Systems</div><div>Automation for growing businesses</div></div></header>
+<header><div class="wrap nav"><div class="brand">AI Business Systems</div><nav><a href="#services">Services</a><a href="#process">Process</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav></div></header>
+
 <main>
 <section class="hero"><div class="wrap">
-  <div class="eyebrow">Business Automation</div>
+  <div class="eyebrow">Practical business automation</div>
   <h1>Stop doing repetitive work manually.</h1>
-  <p>We map your business workflows and build practical automation systems for leads, forms, reporting, notifications, websites, and internal operations.</p>
-  <a class="cta" href="mailto:hello@example.com">Request an automation audit</a>
+  <p class="lead">We find repetitive work inside your business and build practical systems that automate it — from lead handling and reporting to monitoring, forms, notifications, and internal workflows.</p>
+  <div class="actions"><a class="btn primary" href="#contact">Request an automation audit</a><a class="btn secondary" href="#services">See services</a></div>
 </div></section>
-<section><div class="wrap"><div class="eyebrow">How it works</div><h2>From manual process to working system.</h2>
+
+<section id="services"><div class="wrap">
+  <div class="section-head"><div class="eyebrow">Services</div><h2>Start small. Automate what matters.</h2><p class="muted">Every project begins with a defined workflow and a measurable outcome. Larger systems are built only when the business case is clear.</p></div>
+  <div class="grid">
+    <article class="card"><h3>Automation Audit</h3><p class="muted">Map one workflow, identify the repetitive work, and receive a prioritized implementation plan.</p><div class="price">₱2,500–₱5,000</div><div class="small">Typical delivery: 2–3 business days</div></article>
+    <article class="card"><h3>Starter Automation</h3><p class="muted">Build one focused automation such as lead processing, scheduled reporting, monitoring, or notifications.</p><div class="price">₱10,000–₱20,000</div><div class="small">Typical delivery: 3–7 business days</div></article>
+    <article class="card"><h3>Business Automation System</h3><p class="muted">Connect multiple steps, systems, integrations, dashboards, schedules, and error handling.</p><div class="price">₱25,000–₱60,000+</div><div class="small">Timeline depends on scope</div></article>
+  </div>
+</div></section>
+
+<section class="band"><div class="wrap"><div class="section-head"><div class="eyebrow">What we automate</div><h2>Useful automation, not automation for its own sake.</h2></div>
 <div class="grid">
-<div class="card"><h3>1. Audit</h3><p class="muted">We map the workflow and identify repetitive tasks, bottlenecks, and automation opportunities.</p><div class="price">₱2,500–₱5,000</div></div>
-<div class="card"><h3>2. Build</h3><p class="muted">We implement the agreed automation using web systems, APIs, databases, and AI where it provides real value.</p><div class="price">₱10,000+</div></div>
-<div class="card"><h3>3. Operate</h3><p class="muted">We monitor and maintain the system so it continues working as your business changes.</p><div class="price">₱2,500/mo+</div></div>
+  <article class="card"><h3>Lead workflows</h3><p class="muted">Forms, qualification, notifications, CRM updates, routing, and follow-up workflows.</p></article>
+  <article class="card"><h3>Reporting</h3><p class="muted">Data collection, validation, scheduled reports, screenshots, summaries, and alerts.</p></article>
+  <article class="card"><h3>Operations</h3><p class="muted">Website checks, recurring tasks, data synchronization, internal tools, and monitoring.</p></article>
 </div></div></section>
-<section><div class="wrap"><div class="eyebrow">What we automate</div><div class="grid">
-<div class="card"><h3>Lead workflows</h3><p class="muted">Forms, qualification, notifications, CRM updates, and follow-ups.</p></div>
-<div class="card"><h3>Reporting</h3><p class="muted">Data collection, validation, screenshots, scheduled reports, and alerts.</p></div>
-<div class="card"><h3>Business operations</h3><p class="muted">Repetitive data entry, monitoring, integrations, dashboards, and internal tools.</p></div>
+
+<section id="process"><div class="wrap"><div class="section-head"><div class="eyebrow">Process</div><h2>From manual process to working system.</h2></div>
+<div class="grid two">
+  <div class="card step"><h3>Discover</h3><p class="muted">We understand the current workflow, tools, volume, bottlenecks, and desired outcome.</p></div>
+  <div class="card step"><h3>Design</h3><p class="muted">We define the automation flow, integrations, edge cases, responsibilities, and scope.</p></div>
+  <div class="card step"><h3>Build & test</h3><p class="muted">The system is implemented, tested against the agreed workflow, and documented.</p></div>
+  <div class="card step"><h3>Operate</h3><p class="muted">Optional monthly support covers monitoring, fixes, workflow changes, and ongoing maintenance.</p></div>
 </div></div></section>
+
+<section id="faq" class="faq"><div class="wrap"><div class="section-head"><div class="eyebrow">FAQ</div><h2>Before we automate anything.</h2></div>
+<details><summary>Do I need to know exactly what should be automated?</summary><p>No. You only need to explain the repetitive task and the result you want. The audit helps identify the best automation opportunity.</p></details>
+<details><summary>Can you work with our existing tools?</summary><p>Usually. The implementation is scoped around the systems and access available to the business, including web tools, spreadsheets, APIs, databases, and notification systems.</p></details>
+<details><summary>Will you replace our whole system?</summary><p>Not by default. The goal is to improve an existing workflow with the smallest practical change that produces a useful result.</p></details>
+<details><summary>What about ongoing support?</summary><p>Monthly maintenance can cover monitoring, fixes, integration changes, scheduled reports, and small improvements. Scope is defined by the selected plan.</p></details>
+</div></section>
+
+<section id="contact"><div class="wrap"><div class="section-head"><div class="eyebrow">Start a conversation</div><h2>Tell us about the repetitive work.</h2><p class="muted">This form is prepared for launch, but the final submission destination must be connected to an owner-approved email or lead-management service before public use.</p></div>
+<form class="form" onsubmit="return prepareLead(event)">
+  <div class="form-grid">
+    <div><label for="name">Name</label><input id="name" name="name" required></div>
+    <div><label for="company">Company</label><input id="company" name="company"></div>
+    <div><label for="email">Email</label><input id="email" name="email" type="email" required></div>
+    <div><label for="workflow">Workflow type</label><select id="workflow" name="workflow"><option>Lead / forms</option><option>Reporting</option><option>Monitoring</option><option>Data / spreadsheets</option><option>Other</option></select></div>
+    <div class="full"><label for="problem">What repetitive task would you like to automate?</label><textarea id="problem" name="problem" required></textarea></div>
+    <div class="full"><label for="volume">How often does it happen?</label><input id="volume" name="volume" placeholder="e.g. 20 times per day"></div>
+    <div class="full"><button class="btn primary" type="submit">Prepare inquiry</button></div>
+  </div>
+</form>
+</div></section>
 </main>
-<footer><div class="wrap">AI Business Systems · Built for practical automation</div></footer>
+
+<footer><div class="wrap">AI Business Systems · Practical automation for growing businesses · Final brand/contact details pending owner approval</div></footer>
+<script>
+function prepareLead(event){
+  event.preventDefault();
+  const data=Object.fromEntries(new FormData(event.target).entries());
+  const text=[
+    "AUTOMATION INQUIRY",
+    "Name: "+data.name,
+    "Company: "+data.company,
+    "Email: "+data.email,
+    "Workflow: "+data.workflow,
+    "Frequency: "+data.volume,
+    "Problem: "+data.problem
+  ].join("\n");
+  navigator.clipboard?.writeText(text);
+  alert("Your inquiry has been prepared and copied. The public submission endpoint still needs to be connected before launch.");
+  return false;
+}
+</script>
 </body>
 </html>
